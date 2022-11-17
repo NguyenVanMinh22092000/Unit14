@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create And Call Constan</title>
+</head>
+<body>
+<script>
+  function MyFunction(answer){
+      let result = '';
+      if (answer)
+          result = "You'r right!";
+      else
+          result = "You'r wrong!";
+      return result;
+  }
+    let x = confirm('You are the best!');
+    let baby = MyFunction(x);
+    alert(baby);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Min Value Of Array</title>
+</head>
+<body>
+  <input type="number" class="input" value="add()">
+  <button onclick="add()"> Push</button>
+  <p class="array"></p> <br>
+  <button onclick="find()">Find min</button>
+  <p class="min">Min of this array is :  </p>
+
+  <script>
+      // add value for array
+      let numbers = [];
+      let inPut = document.querySelector('.input');
+      function add() {
+          numbers.push(+inPut.value);
+          inPut.value = '';
+
+      }
+      // find min
+    function find(){
+      document.querySelector('.array').innerHTML = numbers;
+      console.log(typeof numbers[0])
+      if (numbers.length > 0)  {
+         let min = numbers[0];
+         for (let i = 1; i < numbers.length; i++){
+             if (numbers[i] < min)
+             min = numbers[i];
+      }
+      document.querySelector('.min').innerHTML = "Min of this array is : " + min;
+      } else
+      document.querySelector('.min').innerHTML = -1;
+    }
+  </script>
+</body>
+</html>
